@@ -1,7 +1,12 @@
 package com.tangcheng.face_corn.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.arcsoft.face.*;
+import com.arcsoft.face.ActiveFileInfo;
+import com.arcsoft.face.EngineConfiguration;
+import com.arcsoft.face.FaceEngine;
+import com.arcsoft.face.FaceFeature;
+import com.arcsoft.face.FaceInfo;
+import com.arcsoft.face.FaceSimilar;
+import com.arcsoft.face.FunctionConfiguration;
 import com.arcsoft.face.enums.DetectMode;
 import com.arcsoft.face.enums.DetectOrient;
 import com.arcsoft.face.enums.ErrorInfo;
@@ -14,18 +19,17 @@ import org.springframework.stereotype.Service;
 import utils.Base64Util;
 import utils.OssUtil;
 
-import static com.arcsoft.face.toolkit.ImageFactory.getGrayData;
-import static com.arcsoft.face.toolkit.ImageFactory.getRGBData;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import static com.arcsoft.face.toolkit.ImageFactory.getRGBData;
+
 @Service
 public class faceServiceImpl implements faceService {
     @Autowired
-
     private RedisTemplate redisTemplate;
     @Override
     public void registeredEngine(String appId,String sdkKey,String dllPath) {
