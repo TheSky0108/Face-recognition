@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Set;
 
-public interface faceService {
+public interface FaceService {
     /**
      * 引擎注册
      * @param appId

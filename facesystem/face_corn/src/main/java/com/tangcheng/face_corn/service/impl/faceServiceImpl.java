@@ -12,7 +12,7 @@ import com.arcsoft.face.enums.DetectOrient;
 import com.arcsoft.face.enums.ErrorInfo;
 import com.arcsoft.face.toolkit.ImageInfo;
 import com.tangcheng.face_corn.faceModel.faceEngineModel;
-import com.tangcheng.face_corn.service.faceService;
+import com.tangcheng.face_corn.service.FaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -28,7 +28,7 @@ import java.util.Set;
 import static com.arcsoft.face.toolkit.ImageFactory.getRGBData;
 
 @Service
-public class faceServiceImpl implements faceService {
+public class faceServiceImpl implements FaceService {
     @Autowired
     private RedisTemplate redisTemplate;
     @Override

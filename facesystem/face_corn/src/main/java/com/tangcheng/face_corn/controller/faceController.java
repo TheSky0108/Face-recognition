@@ -1,6 +1,6 @@
 package com.tangcheng.face_corn.controller;
 
-import com.tangcheng.face_corn.service.faceService;
+import com.tangcheng.face_corn.service.FaceService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +11,6 @@ import utils.Base64Util;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -24,7 +23,7 @@ public class faceController {
     @Value("${face.sdkKey}")
     String sdkKey;
     @Autowired
-    faceService faceService;
+    FaceService faceService;
     @ApiOperation("激活引擎")
     @PutMapping("/registered_engine")
     public void registeredEngine(){
