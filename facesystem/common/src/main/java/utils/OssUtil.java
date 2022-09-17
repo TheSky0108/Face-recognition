@@ -11,6 +11,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * OSS工具类
+ */
 public class OssUtil {
     public static String upFileTooss(byte[] imagebyte, String endpoint, String accessKeyId, String accessKeySecret, String bucketname, String filename) {
 
