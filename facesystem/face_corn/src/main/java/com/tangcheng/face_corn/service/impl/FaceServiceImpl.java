@@ -28,7 +28,7 @@ import java.util.Set;
 import static com.arcsoft.face.toolkit.ImageFactory.getRGBData;
 
 @Service
-public class faceServiceImpl implements FaceService {
+public class FaceServiceImpl implements FaceService {
     @Autowired
     private RedisTemplate redisTemplate;
     @Override
